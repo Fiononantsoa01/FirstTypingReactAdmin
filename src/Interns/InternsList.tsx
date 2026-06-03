@@ -10,7 +10,12 @@ import {
   SelectInput,
   EditButton,
   DeleteButton,
+  FilterButton,
+  TopToolbar,
+  CreateButton,
+
 } from "react-admin";
+import { QuickAddIntern } from "./QuickAddIntern";
 
 const filters = [
   <SearchInput source="q" alwaysOn />,
@@ -32,14 +37,19 @@ const filters = [
     {id:false, name:'non rénuméré'}
   ]}/>
 ];
-
+const ListActions =()=>(
+  <TopToolbar>
+    <FilterButton filters={filters} /> 
+    <QuickAddIntern/>
+    <CreateButton/>
+  </TopToolbar>)
 export const InternsList = () => (
-  <List filters={filters} perPage={5}>
+  <List filters={filters} actions={<ListActions/>}>
     <Datagrid rowClick="show">
       <TextField source="firstname" label="Prénom" />
       <TextField source="lastname" label="Nom" />
       <TextField source="email" label="Email" />
-      <ReferenceField source="id" reference="employees" label="Encadreur" empty="missing manager"
+      <ReferenceField source="managerId" reference="employees" label="Encadreur" empty="missing manager"
         >
           {/*  <TextField source="firstname"/>
             <TextField source="lastname"/>
