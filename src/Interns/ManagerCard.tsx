@@ -2,30 +2,28 @@ import { useRecordContext, useGetOne } from 'react-admin';
 import { Card, CardContent, Typography, Chip } from '@mui/material';
 
 export const ManagerCard = () => {
-  // useRecordContext pour lire le stagiaire courant
+ 
   const intern = useRecordContext();
 
-  // useGetOne pour charger le manager
-  // { enabled: !!intern?.managerId } évite un appel avec id undefined
+ 
   const { data: manager, isPending, error } = useGetOne(
     'employees',
     { id: intern?.managerId },
     { enabled: !!intern?.managerId }
   );
 
-  // Etat 1 — chargement
   if (isPending) return (
     <Typography>Chargement du manager...</Typography>
   );
 
-  // Etat 2 — erreur
+
   if (error) return (
     <Typography color="error">
       Erreur : impossible de charger le manager
     </Typography>
   );
 
-  // Etat 3 — données disponibles
+  
   return (
     <Card sx={{ mt: 2, maxWidth: 400 }}>
       <CardContent>
