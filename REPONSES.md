@@ -72,3 +72,5 @@ Question 5.1 : Quelle différence y a-t-il entre SimpleShowLayout et TabbedShowL
   Question 6.1
   Le ReferenceField genère 
 GET http://localhost:3002/employees?id=1&id=2
+Question 6.2 
+un message s'affiche si le manager ne correspond à aucun employé

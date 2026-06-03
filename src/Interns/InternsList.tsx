@@ -14,7 +14,7 @@ import {
 
 const filters = [
   <SearchInput source="q" alwaysOn />,
-  /*<SelectInput
+  <SelectInput
     source="department"
     label="Département"
     choices={[
@@ -23,7 +23,14 @@ const filters = [
       { id: "RH", name: "RH" },
       { id: "Finance", name: "Finance" },
     ]}
-  />,*/
+  />,
+  <SelectInput
+  source="isPaid"
+  label="rénuméré"
+  choices={[
+   {id:true , name:'Rénuméré'},
+    {id:false, name:'non rénuméré'}
+  ]}/>
 ];
 
 export const InternsList = () => (
