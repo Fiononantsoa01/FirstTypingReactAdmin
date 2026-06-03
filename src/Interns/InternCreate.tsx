@@ -1,4 +1,4 @@
-import { Create, SimpleForm, TextInput, ReferenceInput, required, BooleanInput, SelectInput, AutocompleteInput } from 'react-admin';
+import { Create, SimpleForm, TextInput, ReferenceInput,NumberInput, required, BooleanInput, SelectInput, AutocompleteInput } from 'react-admin';
 import { useWatch, useFormContext } from 'react-hook-form';
 import { useGetOne } from 'react-admin';
 import {useEffect} from 'react';
@@ -21,6 +21,19 @@ const AutoDepartment = () => {
         <TextInput source="department" label="Département" disabled />
     );
 };
+const SalaireConditionnel = () => {
+    const isPaid = useWatch({ name: 'isPaid' });
+    
+    if (!isPaid) return null;
+    
+    return (
+      <NumberInput 
+        source="amount" 
+        label="Salaire" 
+        validate={required()} 
+      />
+    );
+  };
 export const InternCreate = () => (
     <Create redirect="list">
         <SimpleForm>
@@ -31,7 +44,8 @@ export const InternCreate = () => (
                 <AutocompleteInput label='firstName' validate={required()} />
             </ReferenceInput>
             <AutoDepartment />
-            <BooleanInput source='isPaid' label="Rénuméré" />
+            <BooleanInput source='isPaid' label="salaire" />
+            <SalaireConditionnel/>
         </SimpleForm>
     </Create>
 )
