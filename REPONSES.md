@@ -68,3 +68,7 @@ Question 5.1 : Quelle différence y a-t-il entre SimpleShowLayout et TabbedShowL
 - TabbedShowLayout organise les champs en plusieurs onglets.
   Utile quand il y a beaucoup de champs à regrouper par catégorie
   pour améliorer la lisibilité.
+
+  Question 6.1
+  Le ReferenceField genère 
+GET http://localhost:3002/employees?id=1&id=2

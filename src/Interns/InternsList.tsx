@@ -32,7 +32,7 @@ export const InternsList = () => (
       <TextField source="firstname" label="Prénom" />
       <TextField source="lastname" label="Nom" />
       <TextField source="email" label="Email" />
-      <ReferenceField source="id" reference="employees" label="Encadreur"
+      <ReferenceField source="id" reference="employees" label="Encadreur" empty="missing manager"
         >
           {/*  <TextField source="firstname"/>
             <TextField source="lastname"/>
