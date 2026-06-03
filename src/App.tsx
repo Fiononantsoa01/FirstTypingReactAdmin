@@ -14,6 +14,7 @@ export const App = () => (
     <Resource
       name="employees"
       list={EmployeeList}
+      /*recordRepresentation={(record)=>`${record.firstname}${" "}${record.lastname}`}*/
       create={EmployeeCreate}
       edit={EmployeeEdit}
       show={EmployeeShow}
@@ -22,6 +23,5 @@ export const App = () => (
       name="Interns"
       list={InternsList}
     />
-    
   </Admin>
 );

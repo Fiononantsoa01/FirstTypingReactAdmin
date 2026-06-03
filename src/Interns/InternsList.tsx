@@ -5,6 +5,8 @@ import {
   NumberField,
   BooleanField,
   SearchInput,
+  ReferenceField,
+  FunctionField,
   SelectInput,
   EditButton,
   DeleteButton,
@@ -30,6 +32,15 @@ export const InternsList = () => (
       <TextField source="firstname" label="Prénom" />
       <TextField source="lastname" label="Nom" />
       <TextField source="email" label="Email" />
+      <ReferenceField source="id" reference="employees" label="Encadreur"
+        >
+          {/*  <TextField source="firstname"/>
+            <TextField source="lastname"/>
+             */}
+              <FunctionField render={record => `${record.firstname} ${record.lastname}`} /> 
+            
+        </ReferenceField>
+      
       <TextField source="department" label="Département" />
       <NumberField
         source="amount"
