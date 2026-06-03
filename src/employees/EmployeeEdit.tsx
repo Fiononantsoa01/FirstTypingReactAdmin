@@ -19,7 +19,7 @@ const deptChoices = [
 
 const EmployeeTitle = () => {
   const record = useRecordContext();
-  return record ? <span>Modifier : {record.salary}</span> : null;
+  return record ? <span>Modifier : {record.firstname}{" "}{record.lastname}</span> : null;
 };
 
 export const EmployeeEdit = () => (
