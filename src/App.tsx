@@ -15,7 +15,7 @@ export const App = () => (
     <Resource
       name="employees"
       list={EmployeeList}
-      /*recordRepresentation={(record)=>`${record.firstname}${" "}${record.lastname}`}*/
+      recordRepresentation={(record)=>`${record.firstname}${" "}${record.lastname}`}
       create={EmployeeCreate}
       edit={EmployeeEdit}
       show={EmployeeShow}

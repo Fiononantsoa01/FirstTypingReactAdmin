@@ -1,4 +1,4 @@
-import { Create, SimpleForm, TextInput, ReferenceInput, required } from 'react-admin';
+import { Create, SimpleForm, TextInput, ReferenceInput, required, BooleanInput, SelectInput, AutocompleteInput} from 'react-admin';
 
 export const InternCreate = ()=>(
     <Create redirect="list">
@@ -6,8 +6,10 @@ export const InternCreate = ()=>(
     <TextInput source="firstname" label="Prénom" validate={required()} />
       <TextInput source="lastname" label="Nom" validate={required()} />
       <TextInput source="email" label="Email" validate={required()} />
-      <ReferenceInput source='managerId' reference='employees'
-      />
+      <ReferenceInput source='managerId' reference='employees' label='Manager'>
+      <AutocompleteInput label='firstName' />
+      </ReferenceInput>
+      <BooleanInput source='isPaid'label="Rénuméré" />
     </SimpleForm>
 </Create>
 )
