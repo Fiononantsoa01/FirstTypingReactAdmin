@@ -51,7 +51,7 @@
       "id": 1,
       "firstname": "Jean",
       "lastname": "Dupuis",
-      "email": "jean@company.com",
+      "email": "jean@intern.com",
       "phone": "0601020304",
       "department": "Informatique",
       "managerId": 1,
@@ -64,7 +64,7 @@
       "id": 2,
       "firstname": "Sophie",
       "lastname": "Leroy",
-      "email": "sophie@company.com",
+      "email": "sophie@intern.com",
       "phone": "0605060708",
       "department": "Marketing",
       "managerId": 2,
@@ -72,6 +72,52 @@
       "endDate": "2024-08-01",
       "isPaid": false,
       "amount": 0
+    },
+    {
+      "id": 3,
+      "firstname": "Lucas",
+      "lastname": "Petit",
+      "email": "lucas@intern.com",
+      "phone": "0607080910",
+      "department": "RH",
+      "managerId": 3,
+      "startDate": "2024-03-01",
+      "endDate": "2024-09-01",
+      "isPaid": true,
+      "amount": 500
+    },
+    {
+      "id": 4,
+      "firstname": "Marie",
+      "lastname": "Durand",
+      "email": "marie@intern.com",
+      "phone": "0611121314",
+      "department": "Finance",
+      "managerId": 4,
+      "startDate": "2024-04-01",
+      "endDate": "2024-10-01",
+      "isPaid": false,
+      "amount": 0
+    },
+    {
+      "id": 5,
+      "firstname": "Paul",
+      "lastname": "Simon",
+      "email": "paul@intern.com",
+      "phone": "0615161718",
+      "department": "Informatique",
+      "managerId": 5,
+      "startDate": "2024-05-01",
+      "endDate": "2024-11-01",
+      "isPaid": false,
+      "amount": 700
+    },
+    {
+      "firstname": "reference",
+      "lastname": "bao",
+      "email": "andrifefyh@gmail.com",
+      "managerId": 4,
+      "id": 6
     }
   ]
 }
