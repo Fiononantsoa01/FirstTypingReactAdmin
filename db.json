@@ -1,15 +1,6 @@
 {
   "employees": [
     {
-      "id": 1,
-      "firstname": "Alice",
-      "lastname": "Martin",
-      "email": "alice@company.com",
-      "department": "Informatique",
-      "salary": 2800,
-      "active": true
-    },
-    {
       "id": 2,
       "firstname": "Bob",
       "lastname": "Dupont",
@@ -56,7 +47,31 @@
     }
   ],
   "trainers": [
-    { "id": 1, "firstname": "Jean", "lastname": "Dupuis", "email": "jean@company.com", "phone": "0601020304", "department": "Informatique", "managerId": 1, "startDate": "2024-01-15", "endDate": "2024-07-15", "isPaid": true, "amount": 600 },
-    { "id": 2, "firstname": "Sophie", "lastname": "Leroy", "email": "sophie@company.com", "phone": "0605060708", "department": "Marketing", "managerId": 2, "startDate": "2024-02-01", "endDate": "2024-08-01", "isPaid": false, "amount": 0 }
+    {
+      "id": 1,
+      "firstname": "Jean",
+      "lastname": "Dupuis",
+      "email": "jean@company.com",
+      "phone": "0601020304",
+      "department": "Informatique",
+      "managerId": 1,
+      "startDate": "2024-01-15",
+      "endDate": "2024-07-15",
+      "isPaid": true,
+      "amount": 600
+    },
+    {
+      "id": 2,
+      "firstname": "Sophie",
+      "lastname": "Leroy",
+      "email": "sophie@company.com",
+      "phone": "0605060708",
+      "department": "Marketing",
+      "managerId": 2,
+      "startDate": "2024-02-01",
+      "endDate": "2024-08-01",
+      "isPaid": false,
+      "amount": 0
+    }
   ]
 }
