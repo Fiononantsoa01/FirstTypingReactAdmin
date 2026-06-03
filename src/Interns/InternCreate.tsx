@@ -1,15 +1,37 @@
-import { Create, SimpleForm, TextInput, ReferenceInput, required, BooleanInput, SelectInput, AutocompleteInput} from 'react-admin';
+import { Create, SimpleForm, TextInput, ReferenceInput, required, BooleanInput, SelectInput, AutocompleteInput } from 'react-admin';
+import { useWatch, useFormContext } from 'react-hook-form';
+import { useGetOne } from 'react-admin';
+import {useEffect} from 'react';
+const AutoDepartment = () => {
+    const managerId = useWatch({ name: 'managerId' });
+    const { setValue } = useFormContext();
 
-export const InternCreate = ()=>(
+    const { data: manager } = useGetOne('employees',
+        { id: managerId },
+        { enabled: !!managerId }
+    );
+
+    useEffect(() => {
+        if (manager) {
+            setValue('department', manager.department);
+        }
+    }, [manager]);
+
+    return (
+        <TextInput source="department" label="Département" disabled />
+    );
+};
+export const InternCreate = () => (
     <Create redirect="list">
-    <SimpleForm>
-    <TextInput source="firstname" label="Prénom" validate={required()} />
-      <TextInput source="lastname" label="Nom" validate={required()} />
-      <TextInput source="email" label="Email" validate={required()} />
-      <ReferenceInput source='managerId' reference='employees' label='Manager'>
-      <AutocompleteInput label='firstName' />
-      </ReferenceInput>
-      <BooleanInput source='isPaid'label="Rénuméré" />
-    </SimpleForm>
-</Create>
+        <SimpleForm>
+            <TextInput source="firstname" label="Prénom" validate={required()} />
+            <TextInput source="lastname" label="Nom" validate={required()} />
+            <TextInput source="email" label="Email" validate={required()} />
+            <ReferenceInput source='managerId' reference='employees' label='Manager'>
+                <AutocompleteInput label='firstName' validate={required()} />
+            </ReferenceInput>
+            <AutoDepartment />
+            <BooleanInput source='isPaid' label="Rénuméré" />
+        </SimpleForm>
+    </Create>
 )
