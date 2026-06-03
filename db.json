@@ -118,6 +118,15 @@
       "email": "andrifefyh@gmail.com",
       "managerId": 4,
       "id": 6
+    },
+    {
+      "isPaid": true,
+      "firstname": "vola",
+      "lastname": "andrinjatovo",
+      "email": "andrifefyh@gmail.com",
+      "managerId": 5,
+      "amount": 300,
+      "id": 7
     }
   ]
 }
